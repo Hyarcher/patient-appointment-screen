@@ -1,37 +1,30 @@
-.container {
+body {
 	font-family: Helvetica;
-	background-color: #d1d1d1;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
 	background-size: cover;
-	display: grid;
-	grid-template-columns: 50px 50px 50px 50px;
-  grid-template-rows: auto;
-  grid-template-areas:
-	  "header header header header"
-	  "main main . sidebar"
-	  "footer footer footer footer";
 }
 
 p {
-	font-size: 130%;
-	color: #112647;
-	top: 30%;
+	font-size: 20px;
+}
+
+p span {
+	background-color: lightgrey;
+	opacity: 0.7;
 }
 
 h1 {
-	color: #112647;
 	width: 400px;
 	margin-top: 30px;
+	padding-left: 1em;
 }
 
-#sweepingPatients {
-	font-size: 130%;
-	color: white;
-	text-decoration: none;
-}
-
-#dateTime {
-	font-size: 130%;
-	color: white;
+h1 span {
+	background-color: lightgrey;
+	opacity: 0.8;
 }
 
 footer {
@@ -41,19 +34,8 @@ footer {
 	position: fixed;
 	width: 100%;
 	overflow: hidden;
-	background-color: #112647;
+	background-color: lightgrey;
 	text-align: center;
 	text-decoration: none;
-}
-
-header {
-	margin-left: -8px;
-	padding: 0px;
-	top: 0;
-	position: fixed;
-	width: 100%;
-	overflow: hidden;
-	background-color: #112647;
-	text-align: center;
-	text-decoration: none;
+	opacity: 0.4;
 }
