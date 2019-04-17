@@ -1,0 +1,59 @@
+.container {
+	font-family: Helvetica;
+	background-color: #d1d1d1;
+	background-size: cover;
+	display: grid;
+	grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+	  "header header header header"
+	  "main main . sidebar"
+	  "footer footer footer footer";
+}
+
+p {
+	font-size: 130%;
+	color: #112647;
+	top: 30%;
+}
+
+h1 {
+	color: #112647;
+	width: 400px;
+	margin-top: 30px;
+}
+
+#sweepingPatients {
+	font-size: 130%;
+	color: white;
+	text-decoration: none;
+}
+
+#dateTime {
+	font-size: 130%;
+	color: white;
+}
+
+footer {
+	margin-left: -8px;
+	padding: 0px;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+	background-color: #112647;
+	text-align: center;
+	text-decoration: none;
+}
+
+header {
+	margin-left: -8px;
+	padding: 0px;
+	top: 0;
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+	background-color: #112647;
+	text-align: center;
+	text-decoration: none;
+}
