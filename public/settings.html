@@ -2,12 +2,53 @@
 <html lang = 'en'>
 
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="UTF-8">
   <link rel="stylesheet" title="Style" href="style.css"/>
-  <link rel="icon" href="caduceus.png"/>
-  <title> Waiting Area Notice Board </title>
+  <link rel="icon" href="images/caduceus.png"/>
+  <title>Settings for Notice Board</title>
 </head>
 
-<main>
-    <h1>Use these settings to change the notice board</h1>
-</main>
+<body>
+  <main id="settingsMenu">
+    <img src="images/help_icon.png" alt="help" id="helpSymbol"/>
+    <p id="settingsHeader"> Settings page for the unattended display </p>
+
+    <div class="patientSettings">
+      <div>
+        <h3> Add a new patient here </h3>
+        <label for="patient"> Patient name: </label>
+        <input type="text" id="patientName" placeholder="e.g John Applewood"/>
+      </div>
+      <div>
+        <label for="doctor"> Doctor: </label>
+        <input type="text" id="doctorName" placeholder="e.g Dr Mark Smith"/>
+      </div>
+      <div>
+        <label for="room"> Room: </label>
+        <input type="text" id="room" placeholder="e.g 1.14"/>
+      </div>
+      <div>
+        <label for="time"> Time: </label>
+        <input type="number" id="time" placeholder="e.g 1115"/>
+      </div>
+      <div>
+        <p id="submitSettings"> Add patient </p>
+      </div>
+    </div>
+
+    <div class="deletePatient">
+      <div>
+        <h3> Delete patients here </h3>
+        <label for="patient"> Patient name: </label>
+        <input type="text" id="patientName" placeholder="e.g John Applewood"/>
+      </div>
+      <div>
+        <p id="submitSettings"> Delete patient </p>
+      </div>
+    </div>
+
+
+  </main>
+
+</body>
+</html>
