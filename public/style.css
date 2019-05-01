@@ -22,14 +22,18 @@ body {
   border: solid 10px black;
 }
 
-#submitSettings {
+#settingBlocks {
+  display: flex;
+}
+
+#addPatient, #submitDelete, #patientName, #doctorName, #room, #time {
 	background-color: #8A8A8A;
 	border: solid 5px black;
 	color: black;
 	padding: 10px 20px;
 	text-align: center;
 	display: inline-block;
-	font-size: 25px;
+	font-size: 30px;
 }
 
 #settingsHeader {
@@ -48,22 +52,11 @@ body {
 	padding-right: 10px;
 }
 
-.patientSettings {
+.patientSettings, .deletePatient, .formattingDisplay {
 	font-family: 'SHOOTING';
 	text-align: center;
-	font-size: 30px;
-	width: 30%;
-	height: 600px;
-	border: solid 5px black;
-	background-color: #555555;
-	color: #D2D2D2;
-}
-
-.deletePatient {
-	font-family: 'SHOOTING';
-	text-align: center;
-	font-size: 30px;
-	width: 30%;
+	font-size: 25px;
+	width: 33%;
 	height: 600px;
 	border: solid 5px black;
 	background-color: #555555;
@@ -75,16 +68,6 @@ body {
 
 
 
-
-
-
-
-
-#listHeading {
-	font-family: 'SHOOTING';
-	font-weight: bold;
-	font-size: 30px;
-}
 
 .patientList {
 	color: #B3B3B3;
@@ -92,23 +75,40 @@ body {
 	grid-template-columns: 12.5% 12.5% 12.5% 12.5%;
 	grid-template-rows: auto;
 	grid-template-areas:
-		". . . ."
+    "heading heading heading heading"
 		"patient doctor room time"
 		"patient doctor room time"
 		"patient doctor room time"
 		"patient doctor room time";
 }
 
+.gridHeadings {
+  grid-area: heading;
+  font-family: 'SHOOTING';
+	font-weight: bold;
+	font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .patient {
 	grid-area: patient;
+  font-size: 15px;
 }
 
 .doctor {
 	grid-area: doctor;
+  font-size: 15px;
 }
 
-p {
-	font-size: 20px;
+.room {
+  grid-area: room;
+  font-size: 15px;
+}
+
+.time {
+  grid-area: time;
+  font-size: 15px;
 }
 
 h1 {

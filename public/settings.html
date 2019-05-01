@@ -13,28 +13,29 @@
     <img src="images/help_icon.png" alt="help" id="helpSymbol"/>
     <p id="settingsHeader"> Settings page for the unattended display </p>
 
-    <div class="patientSettings">
-      <div>
-        <h3> Add a new patient here </h3>
-        <label for="patient"> Patient name: </label>
-        <input type="text" id="patientName" placeholder="e.g John Applewood"/>
+    <div id="settingBlocks">
+      <div class="patientSettings">
+        <div>
+          <h3> Add a new patient here </h3>
+          <label for="patient"> Patient name: </label>
+          <input type="text" id="patientName" placeholder="e.g John Applewood"/>
+        </div>
+        <div>
+          <label for="doctor"> Doctor: </label>
+          <input type="text" id="doctorName" placeholder="e.g Dr Mark Smith"/>
+        </div>
+        <div>
+          <label for="room"> Room: </label>
+          <input type="text" id="room" placeholder="e.g 1.14"/>
+        </div>
+        <div>
+          <label for="time"> Time: </label>
+          <input type="number" id="time" placeholder="e.g 1115"/>
+        </div>
+        <div>
+          <p id="addPatient"> Add patient </p>
+        </div>
       </div>
-      <div>
-        <label for="doctor"> Doctor: </label>
-        <input type="text" id="doctorName" placeholder="e.g Dr Mark Smith"/>
-      </div>
-      <div>
-        <label for="room"> Room: </label>
-        <input type="text" id="room" placeholder="e.g 1.14"/>
-      </div>
-      <div>
-        <label for="time"> Time: </label>
-        <input type="number" id="time" placeholder="e.g 1115"/>
-      </div>
-      <div>
-        <p id="submitSettings"> Add patient </p>
-      </div>
-    </div>
 
     <div class="deletePatient">
       <div>
@@ -43,10 +44,16 @@
         <input type="text" id="patientName" placeholder="e.g John Applewood"/>
       </div>
       <div>
-        <p id="submitSettings"> Delete patient </p>
+        <p id="submitDelete"> Delete patient </p>
       </div>
     </div>
 
+    <div class="formattingDisplay">
+      <h3> Format the unattended display here </h3>
+      <label for="patient"> Patient name: </label>
+      <input type="text" id="patientName" placeholder="e.g John Applewood"/>
+    </div>
+  </div>
 
   </main>
 
