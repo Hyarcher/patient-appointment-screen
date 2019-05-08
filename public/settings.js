@@ -12,10 +12,33 @@ function postPatient() {
   }
 
   let xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "/patientInfo", true);
+  xhttp.open("POST", "/addPatient", true);
   xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   xhttp.send("patient=" + patientName + "&doctor=" + doctorName + "&room=" + room + "&time=" + time);
 
+}
+
+function getPatientsToDelete() {
+  getAllPatients(function(patients) {
+    let dropDownData = document.getElementById("dropbtn");
+
+    for (let i = 0; i < patients.length; i++) {
+
+      let deletionChoice = document.createElement("option");
+      deletionChoice.textContent = patients[i].patient;
+
+      dropDownData.appendChild(deletionChoice);
+    }
+  });
+}
+
+function deletePatient() {
+  let patientName = document.querySelector("#dropbtn").value;
+  let xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "/deletePatient", true);
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.send("patient=" + patientName);
+  location.reload();
 }
 
 document.querySelector("#helpSymbol").addEventListener("click", function() {
@@ -23,6 +46,9 @@ document.querySelector("#helpSymbol").addEventListener("click", function() {
   document.querySelector("#settingBlocks").style.display = "none";
 });
 
+window.onload = function (){
+  getPatientsToDelete();
+}
 //if (document.querySelector("#settingsHeader").style.display = "none" && document.querySelector("#settingBlocks").style.display = "none"){
 //document.querySelector
 //}

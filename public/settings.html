@@ -38,13 +38,12 @@
       </form>
 
       <div class="deletePatient">
+        <h3> Delete patients here </h3>
         <div>
-          <h3> Delete patients here </h3>
-          <label for="patient"> Patient name: </label>
-          <input type="text" id="patientName" placeholder="e.g John Applewood" />
+          <select id="dropbtn"></select>
         </div>
         <div>
-          <p id="submitDelete"> Delete patient </p>
+          <button id="submitDelete" onclick="deletePatient()"> Delete patient </button>
         </div>
       </div>
 
@@ -61,3 +60,6 @@
 </body>
 
 </html>
+
+
+<div id="dropDownPatients"></div>

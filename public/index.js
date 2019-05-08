@@ -4,7 +4,11 @@
 function getPatientInfo() {
   getAllPatients(
     function(patientData) {
-      console.log("this happened");
+      let patientsDiv = document.getElementsByClassName('patients')[0];
+      patientsDiv.parentNode.removeChild(patientsDiv);
+
+      patientsDiv = document.createElement('div');
+      patientsDiv.className = 'patients';
       for (let i = 0; i < patientData.length; i++) {
 
         let pPatient = document.createElement("p");
@@ -23,15 +27,13 @@ function getPatientInfo() {
         pTime.className = "time";
         pTime.textContent = patientData[i].time;
 
-        document.getElementsByClassName("patientList")[0].appendChild(pPatient);
-        document.getElementsByClassName("patientList")[0].appendChild(pDoctor);
-        document.getElementsByClassName("patientList")[0].appendChild(pRoom);
-        document.getElementsByClassName("patientList")[0].appendChild(pTime);
-
+        patientsDiv.appendChild(pPatient);
+        patientsDiv.appendChild(pDoctor);
+        patientsDiv.appendChild(pRoom);
+        patientsDiv.appendChild(pTime);
       }
+      document.getElementsByClassName("patientList")[0].appendChild(patientsDiv);
     });
 }
 
-getPatientInfo();
-
-//setInterval(getPatientInfo, 1000);
+setInterval(getPatientInfo, 2000);
