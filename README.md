@@ -3,23 +3,25 @@
 An unattended display screen for a medical centre that displays the patient information that is added or deleted from a settings page run on another device.
 
 
-## Installing
+## How to install and run the application.
 
-A step by step series of examples that tell you how to get a development env running
+Extract the Zip.
 
-Say what the step will be
+Open a command line application.
 
-```
-Give the example
-```
-
-And repeat
+Using 'cd', locate the directory and 
 
 ```
-until finished
+cd Waiting-room-notice-board-master
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Then you should be in the directory.
+If so then type;
+
+```
+npm install
+```
+This will install the node modules required for the application to run correctly.
 
 ## Running the tests
 
