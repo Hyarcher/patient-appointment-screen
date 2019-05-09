@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" title="Style" href="style.css" />
   <link rel="icon" href="images/caduceus.png" />
   <title>Settings for Notice Board</title>
@@ -11,26 +12,27 @@
 <body>
   <main id="settingsMenu">
     <img src="images/help_icon.png" alt="help" id="helpSymbol" />
+    <p id="seeDisplay"> See the display </p>
     <p id="settingsHeader"> Settings page for the unattended display </p>
 
     <div id="settingBlocks">
       <form class="patientSettings">
         <div>
           <h3> Add a new patient here </h3>
-          <label for="patient"> Patient name: </label>
+          <p class="labels" for="patient"> Patient name: </p>
           <input type="text" id="patientName" name="patient" placeholder="e.g John Applewood" />
         </div>
         <div>
-          <label for="doctor"> Doctor: </label>
+          <p class="labels" for="doctor"> Doctor: </p>
           <input type="text" id="doctorName" name="doctor" placeholder="e.g Dr Mark Smith" />
         </div>
         <div>
-          <label for="room"> Room: </label>
+          <p class="labels" for="room"> Room: </p>
           <input type="text" id="room" name="room" placeholder="e.g 1.14" />
         </div>
         <div>
-          <label for="time"> Time: </label>
-          <input type="number" id="time" name="time" placeholder="e.g 1115" />
+          <p class="labels" for="time"> Time: </p>
+          <input type="number" id="time" name="time" placeholder="e.g 0900" />
         </div>
         <div>
           <button id="addPatient" onclick="postPatient()"> Add patient </button>
@@ -45,12 +47,6 @@
         <div>
           <button id="submitDelete" onclick="deletePatient()"> Delete patient </button>
         </div>
-      </div>
-
-      <div class="formattingDisplay">
-        <h3> Format the unattended display here </h3>
-        <label for="patient"> Patient name: </label>
-        <input type="text" id="patientName" placeholder="e.g John Applewood" />
       </div>
     </div>
 

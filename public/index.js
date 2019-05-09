@@ -1,6 +1,5 @@
 "use strict";
 
-
 function getPatientInfo() {
   getAllPatients(
     function(patientData) {

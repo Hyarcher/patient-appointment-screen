@@ -16,36 +16,62 @@ button {
   font-family: 'SHOOTING';
 }
 
+h1 {
+  width: 80vw;
+  margin-top: 30px;
+  padding-left: 1em;
+  color: #B3B3B3;
+  font-family: 'SHOOTING';
+  font-size: 8vh;
+}
+
 #settingsMenu {
   width: 80%;
-  height: 720px;
+  height: 20%;
   background-color: lightgrey;
   opacity: 0.7;
   margin: 25px auto;
   margin-top: 5%;
-  border: solid 10px black;
+  border: solid 5px black;
 }
 
 #settingBlocks {
   display: flex;
 }
 
-#addPatient, #submitDelete, #patientName, #doctorName, #room, #time {
+#addPatient, #submitDelete {
   background-color: #8A8A8A;
-  border: solid 5px black;
+  border: solid 3px black;
   color: black;
-  padding: 10px 20px;
   text-align: center;
   display: inline-block;
-  font-size: 30px;
+  font-size: 140%;
+}
+
+#patientName, #doctorName, #room, #time {
+  background-color: #8A8A8A;
+  border: solid 3px black;
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-size: 140%;
+  width: 75%;
 }
 
 #settingsHeader {
   font-family: 'SHOOTING';
   font-size: 36px;
   font-weight: bold;
-  padding-left: 120px;
   text-align: center;
+}
+
+#seeDisplay {
+  font-family: 'SHOOTING';
+  background-color: #8A8A8A;
+  border: solid 3px black;
+  text-align: center;
+  font-size: 150%;
+  display: inline-block;
 }
 
 #helpSymbol {
@@ -54,67 +80,9 @@ button {
   float: right;
   padding-top: 10px;
   padding-right: 10px;
-}
-
-
-.patientSettings, .deletePatient, .formattingDisplay {
-  font-family: 'SHOOTING';
-  text-align: center;
-  font-size: 25px;
-  width: 33%;
-  height: 600px;
-  border: solid 5px black;
-  background-color: #555555;
-  color: #D2D2D2;
-}
-
-.patientList {
-  color: #B3B3B3;
-  display: grid;
-  grid-template-columns: 12.5% 12.5% 12.5% 12.5%;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "heading heading heading heading";
-}
-
-.gridHeadings {
-  grid-area: heading;
-  font-family: 'SHOOTING';
-  font-weight: bold;
-  font-size: 25px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.patients {}
-
-h1 {
-  width: 400px;
-  margin-top: 30px;
-  padding-left: 1em;
-  color: #B3B3B3;
-  font-family: 'SHOOTING';
-  font-size: 60px;
-}
-
-footer {
-  margin-left: -8px;
-  padding: 0px;
-  bottom: 0;
-  position: fixed;
-  width: 100%;
-  height: 10vh;
   overflow: hidden;
-  background-color: #D40000;
-  font-size: 30px;
-  opacity: 0.4;
 }
 
-
-/*************************************************************
-/*************************************************************
-
-/* Dropdown Button */
 #dropbtn {
   background-color: #8A8A8A;
   border: solid 5px black;
@@ -122,4 +90,40 @@ footer {
   text-align: center;
   display: inline-block;
   font-size: 30px;
+}
+
+.labels {
+  padding-bottom: 0.2vh;
+}
+
+.patientSettings, .deletePatient {
+  font-family: 'SHOOTING';
+  text-align: center;
+  font-size: 140%;
+  width: 80%;
+  height: 600px;
+  border: solid 5px black;
+  background-color: #555555;
+  color: #D2D2D2;
+}
+
+.gridHeadings {
+  font-family: 'SHOOTING';
+  color: #B3B3B3;
+  font-weight: bold;
+  font-size: 5vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  justify-items: start;
+}
+
+.patients {
+  color: #B3B3B3;
+  font-family: 'SHOOTING';
+  font-size: 3.5vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  justify-items: start;
 }

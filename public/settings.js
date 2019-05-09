@@ -44,6 +44,11 @@ function deletePatient() {
 document.querySelector("#helpSymbol").addEventListener("click", function() {
   document.querySelector("#settingsHeader").style.display = "none";
   document.querySelector("#settingBlocks").style.display = "none";
+  document.querySelector("#seeDisplay").style.display = "none";
+});
+
+document.querySelector("#seeDisplay").addEventListener("click", function(){
+  window.open("index.html");
 });
 
 window.onload = function (){
