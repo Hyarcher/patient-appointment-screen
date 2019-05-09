@@ -2,6 +2,9 @@
 
 An unattended display screen for a medical centre that displays the patient information that is added or deleted from a settings page run on another device.
 
+## Functionality
+
+* Adding patients into the display
 
 ## How to install and run the application.
 
@@ -31,7 +34,3 @@ npm start
 
 The command line gives the user the url to follow.
 The user can enter this url in either Google Chrome, Safari or Firefox.
-
-## Authors
-
-* **Harry Chapman** - *Initial work* - [Hyarcher](https://github.com/Hyarcher)
