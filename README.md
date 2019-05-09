@@ -9,13 +9,13 @@ Extract the Zip.
 
 Open a command line application.
 
-Using 'cd', locate the directory and 
+Using 'cd', locate the directory;
 
 ```
 cd Waiting-room-notice-board-master
 ```
 
-Then you should be in the directory.
+Then the user should be in the directory.
 If so then type;
 
 ```
@@ -23,35 +23,14 @@ npm install
 ```
 This will install the node modules required for the application to run correctly.
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Now the server can be started by using the following code;
 
 ```
-Give an example
+npm start
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+The command line gives the user the url to follow.
+The user can enter this url in either Google Chrome, Safari or Firefox.
 
 ## Contributing
 
@@ -63,16 +42,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Harry Chapman** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
