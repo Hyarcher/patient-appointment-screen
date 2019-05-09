@@ -92,6 +92,13 @@ h1 {
   font-size: 30px;
 }
 
+#helpInfo {
+  display: none;
+  font-family: 'SHOOTING';
+  text-align: center;
+  padding: 2vh;
+}
+
 .labels {
   padding-bottom: 0.2vh;
 }

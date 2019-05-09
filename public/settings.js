@@ -6,8 +6,8 @@ function postPatient() {
   let room = document.getElementById("room").value;
   let time = document.getElementById("time").value;
 
-  if (patientName.length == 0) {
-    alert("Invalid input");
+  if (patientName.length == 0 || doctorName.length == 0 || room.length == 0 || time.length == 0) {
+    alert("Invalid input: no input fields can be empty");
     return;
   }
 
@@ -42,18 +42,21 @@ function deletePatient() {
 }
 
 document.querySelector("#helpSymbol").addEventListener("click", function() {
-  document.querySelector("#settingsHeader").style.display = "none";
-  document.querySelector("#settingBlocks").style.display = "none";
-  document.querySelector("#seeDisplay").style.display = "none";
+  let helpInfo = document.querySelector("#helpInfo");
+  helpInfo.style.display === "block" ? helpInfo.style.display = "none" : helpInfo.style.display = "block";
 });
 
-document.querySelector("#seeDisplay").addEventListener("click", function(){
-  window.open("index.html");
+//document.querySelector("#helpSymbol").addEventListener("click", function() {
+//document.querySelector("#settingsHeader").style.display = "none";
+//document.querySelector("#settingBlocks").style.display = "none";
+//document.querySelector("#seeDisplay").style.display = "none";
+
+//});
+
+document.querySelector("#seeDisplay").addEventListener("click", function() {
+  window.open("screen.html");
 });
 
-window.onload = function (){
+window.onload = function() {
   getPatientsToDelete();
 }
-//if (document.querySelector("#settingsHeader").style.display = "none" && document.querySelector("#settingBlocks").style.display = "none"){
-//document.querySelector
-//}

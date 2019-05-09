@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" title="Style" href="style.css" />
   <link rel="icon" href="images/caduceus.png" />
   <title>Settings for Notice Board</title>
@@ -14,6 +14,18 @@
     <img src="images/help_icon.png" alt="help" id="helpSymbol" />
     <p id="seeDisplay"> See the display </p>
     <p id="settingsHeader"> Settings page for the unattended display </p>
+
+    <div id="helpInfo">
+      <h2> How to add patients </h2>
+      <h3> You can add patients by filling in the input boxes below. The system will
+        reject any fields which are empty. After entering the data, click the 'Add patient' button. </h3>
+      <h2> How to delete patients </h2>
+      <h3> You can delete patients only when there are patients stored. The drop down
+        menu will be blank and un-clickable when empty. When data has been stored from the add
+        patient button, the names of patients will show and and be able to be selected for deletion.
+        <h3> You can see the display page by clicking the 'See display' button. </h3>
+        <h3> To hide this menu, please click on the help logo again. </h3>
+    </div>
 
     <div id="settingBlocks">
       <form class="patientSettings">
@@ -51,7 +63,7 @@
     </div>
 
   </main>
-  <script type="text/javascript" src="utils.js"></script>
+  <script type="text/javascript" src="patients.js"></script>
   <script type="text/javascript" src="settings.js"></script>
 </body>
 
