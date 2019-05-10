@@ -1,4 +1,4 @@
-# Medical centre waiting room screen
+# Patient appointment waiting room screen
 
 An unattended display screen for a medical centre that displays the patient information that is added or deleted from a settings page run on another device.
 
