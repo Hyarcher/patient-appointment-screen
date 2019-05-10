@@ -5,25 +5,27 @@ const app = express();
 const bodyParser = require("body-parser");
 const fs = require("fs");
 
+// Information for reaching the website via the url.
 console.log("The server is now running! Please go to http://localhost:8080 in your chosen web browser");
+
+// Using the public folder for resources.
 app.use(express.static("public"));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+// Port number for the server.
 app.listen(8080);
 
-app.get("/",function(req, res){
+// Loads the settings page as the first page to be displayed.
+app.get("/", function(req, res) {
   res.sendFile(__dirname + "/public/settings.html");
 });
 
-// Adds patient from file.
-// @param {string} fileLocation - The JSON file location.
-// @param {string} patientInfo - The information of the object to be added to the JSON file.
-
+// Adds patient from file using fs.writeFile and stringifies patients.
 function addToPatientFile(fileLocation, patientInfo) {
   fs.readFile(fileLocation, function(err, jsonData) {
-    console.log("json data" + jsonData);
-    console.log("json length" + jsonData.length)
-
     let patients = (jsonData.length == 0) ? [] : JSON.parse(jsonData);
     patients.push({
       "patient": patientInfo.patient,
@@ -38,29 +40,27 @@ function addToPatientFile(fileLocation, patientInfo) {
   });
 }
 
-// Removes patient from file.
-// @param {string} fileLocation - The JSON file location.
-// @param {string} patientName - The patient name to delete from JSON file.
-
-function deletePatientFromFile(fileLocation, patientName){
-    fs.readFile(fileLocation, function(err, jsonData) {
-      console.log("json data" + jsonData);
-      console.log("json length" + jsonData.length)
-      if (jsonData.length == 0) {
-          return;
-      }
-      let patients = JSON.parse(jsonData);
-      patients = patients.filter((patient) => {return patient.patient != patientName});
-
-      fs.writeFile(fileLocation, JSON.stringify(patients), function() {
-        console.log("successfully deleted patient from file.");
-      });
+// Removes a patient from file using fs.writeFile and stringifies patients.
+function deletePatientFromFile(fileLocation, patientName) {
+  fs.readFile(fileLocation, function(err, jsonData) {
+    if (jsonData.length == 0) {
+      return;
+    }
+    let patients = JSON.parse(jsonData);
+    patients = patients.filter((patient) => {
+      return patient.patient != patientName
     });
+
+    fs.writeFile(fileLocation, JSON.stringify(patients), function() {
+      console.log("Deleted patient");
+    });
+  });
 }
 
-//
-// Routes
-//
+
+//////////////////////////////////////
+// Routes to handle client requests //
+//////////////////////////////////////
 
 app.get("/allPatients", function(req, res) {
   let patientInfo = fs.readFileSync("patients.json");
@@ -83,13 +83,12 @@ app.post("/addPatient", function(req, res) {
   res.status(200).send(JSON.stringify(patientInfo));
 });
 
-
 app.post("/deletePatient", function(req, res) {
-    let patientName = req.body.patient;
-    if (patientName){
-        deletePatientFromFile("patients.json", patientName);
-        res.status(200).send();
-    } else{
-        res.status(400).send();
-    }
+  let patientName = req.body.patient;
+  if (patientName) {
+    deletePatientFromFile("patients.json", patientName);
+    res.status(200).send();
+  } else {
+    res.status(400).send();
+  }
 });
