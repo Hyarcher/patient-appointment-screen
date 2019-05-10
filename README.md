@@ -38,4 +38,4 @@ npm start
 The command line gives the user the url to follow.
 The user can enter this url in either Google Chrome, Safari or Firefox.
 
-The first page that opens is the settings page where the user can add or delete patients on the display. By clicking the 'See display' button the application opens the unattended display in another tab.
+The first page that opens is the settings page where the user can add or delete patients on the display. By clicking the 'See the display' button the application opens the unattended display in another tab.
