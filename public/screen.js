@@ -1,5 +1,7 @@
 "use strict";
 
+// Creates elements for the parsed JSON from getAllPatients.
+// This allows for displaying on the unattended display.
 function getPatientInfo() {
   getAllPatients(
     function(patientData) {
@@ -35,4 +37,5 @@ function getPatientInfo() {
     });
 }
 
+// Gets the patient info every second
 setInterval(getPatientInfo, 1000);

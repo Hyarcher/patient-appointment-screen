@@ -1,3 +1,4 @@
+/* Imported custom font from font folder */
 @font-face {
   font-family: 'SHOOTING';
   src: url(fonts/SHOOTING.ttf);
@@ -12,6 +13,7 @@ body {
   background-size: cover;
 }
 
+/* Making all buttons have the same font */
 button {
   font-family: 'SHOOTING';
 }
@@ -24,6 +26,13 @@ h1 {
   font-family: 'SHOOTING';
   font-size: 8vh;
 }
+
+
+/********************************/
+/********************************/
+/**** Settings menu styling  ****/
+/********************************/
+/********************************/
 
 #settingsMenu {
   width: 80%;
@@ -39,6 +48,7 @@ h1 {
   display: flex;
 }
 
+/* Submit buttons for add patient and delete patient */
 #addPatient, #submitDelete {
   background-color: #8A8A8A;
   border: solid 3px black;
@@ -48,6 +58,7 @@ h1 {
   font-size: 140%;
 }
 
+/* input boxes for the add patient and delete patient settings */
 #patientName, #doctorName, #room, #time {
   background-color: #8A8A8A;
   border: solid 3px black;
@@ -83,6 +94,7 @@ h1 {
   overflow: hidden;
 }
 
+/* drop-down button for delete patients */
 #dropbtn {
   background-color: #8A8A8A;
   border: solid 5px black;
@@ -92,6 +104,7 @@ h1 {
   font-size: 30px;
 }
 
+/* Styling for the help information */
 #helpInfo {
   display: none;
   font-family: 'SHOOTING';
@@ -103,6 +116,7 @@ h1 {
   padding-bottom: 0.2vh;
 }
 
+/* Styling for the two settings options, add a patient & delete a patient. */
 .patientSettings, .deletePatient {
   font-family: 'SHOOTING';
   text-align: center;
@@ -114,6 +128,14 @@ h1 {
   color: #D2D2D2;
 }
 
+
+/********************************/
+/********************************/
+/**** Display screen styling ****/
+/********************************/
+/********************************/
+
+/* Creates a grid display for the headings of the grid */
 .gridHeadings {
   font-family: 'SHOOTING';
   color: #B3B3B3;
@@ -125,6 +147,7 @@ h1 {
   justify-items: start;
 }
 
+/* Creates a grid display for the patients that are inputted from the 'patients.json' file */
 .patients {
   color: #B3B3B3;
   font-family: 'SHOOTING';

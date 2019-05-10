@@ -1,3 +1,6 @@
+"use strict";
+
+// Ajax GET request for getting all the patients.
 function getAllPatients(callback) {
   let patientRequest = new XMLHttpRequest();
   patientRequest.open("GET", "/allPatients");

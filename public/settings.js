@@ -1,11 +1,13 @@
 "use strict";
 
+// Posts the patient taking all the values of the elements by ID's.
 function postPatient() {
   let patientName = document.getElementById("patientName").value;
   let doctorName = document.getElementById("doctorName").value;
   let room = document.getElementById("room").value;
   let time = document.getElementById("time").value;
 
+  // Inputs cannot be empty.
   if (patientName.length == 0 || doctorName.length == 0 || room.length == 0 || time.length == 0) {
     alert("Invalid input: no input fields can be empty");
     return;
@@ -18,6 +20,7 @@ function postPatient() {
 
 }
 
+// Gets the patients and puts creates the options for them in the drop-down menu.
 function getPatientsToDelete() {
   getAllPatients(function(patients) {
     let dropDownData = document.getElementById("dropbtn");
@@ -32,6 +35,7 @@ function getPatientsToDelete() {
   });
 }
 
+// Ajax POST request to delete patients. Sends the value from the delete patient drop-down box.
 function deletePatient() {
   let patientName = document.querySelector("#dropbtn").value;
   let xhttp = new XMLHttpRequest();
@@ -41,18 +45,14 @@ function deletePatient() {
   location.reload();
 }
 
+// Event listener for the help icon. On clicking, it shows the settings help
+// information and then hides it on the second click.
 document.querySelector("#helpSymbol").addEventListener("click", function() {
   let helpInfo = document.querySelector("#helpInfo");
   helpInfo.style.display === "block" ? helpInfo.style.display = "none" : helpInfo.style.display = "block";
 });
 
-//document.querySelector("#helpSymbol").addEventListener("click", function() {
-//document.querySelector("#settingsHeader").style.display = "none";
-//document.querySelector("#settingBlocks").style.display = "none";
-//document.querySelector("#seeDisplay").style.display = "none";
-
-//});
-
+// Event listener for opening the display screen in a separate tab.
 document.querySelector("#seeDisplay").addEventListener("click", function() {
   window.open("screen.html");
 });
